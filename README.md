@@ -83,3 +83,9 @@ Contract Address:
 
 
 0xc74182010971a6d30652fcfbccc947b7d0d45ce2
+
+Etherscan:
+
+https://rinkeby.etherscan.io/address/0xc74182010971a6d30652fcfbccc947b7d0d45ce2
+
+https://rinkeby.etherscan.io/token/0xc74182010971a6d30652fcfbccc947b7d0d45ce2
