@@ -60,10 +60,13 @@ contract StarNotary is ERC721 {
 
     // function that exchange stars between two users
     function exchangeStars(uint256 _tokenId1, uint256 _tokenId2) public {
-        address owner1 = ownerOf(_tokenId1);
-        address owner2 = ownerOf(_tokenId2);
+        address firstTokenowner1 = ownerOf(_tokenId1);
+        address secondTokenowner2 = ownerOf(_tokenId2);
         _transferFrom(owner1, owner2, _tokenId1);
         _transferFrom(owner2, owner1, _tokenId2);
+              require(msg.sender == firstTokenOwner || msg.sender == secondTokenOwner, "You don't own any of these Stars!");
+        _transferFrom(firstTokenOwner, secondTokenOwner, _tokenId1);
+                _transferFrom(secondTokenOwner, firstTokenOwner, _tokenId2);
     }
 
     // function that transfer star
